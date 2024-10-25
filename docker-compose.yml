@@ -5,8 +5,8 @@ services: #Container
     networks:
       - beispiel-netzwerk
     environment:
-      - MYSQL_ROOT_PASSWORD=secret
-      - MYSQL_DATABASE=testdb
+      - MYSQL_ROOT_PASSWORD= ${MYSQL_ROOT_PASSWORD}
+      - MYSQL_DATABASE= ${MYSQL_DATABASE}
     volumes:
       - db_mysql_save:/var/lib/mysql
     healthcheck:
